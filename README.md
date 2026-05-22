@@ -24,26 +24,26 @@ Granular ingredient checklists, nutrition statistics, prep times, dynamic quanti
 
 ## ✨ Features & Architecture
 
-### 🔑 1. Secure Authentication System (Q1)
+### 🔑 1. Secure Authentication System 
 *   **Platform-Aware Authentication**: Handled seamlessly through a single, unified `AuthContext` provider.
 *   **Sign-Up Flow**: Registers new users in Firebase Authentication, creating a custom user profile with their designated display name.
 *   **Login Flow**: Validates email credentials instantly and transitions route stacks safely.
 *   **Robust Navigation Locks**: Guests are locked out of the app core using strict conditional stack navigation based on the user's active session state.
 
-### 📦 2. Firebase Cloud Firestore Order Management (Q2)
+### 📦 2. Firebase Cloud Firestore Order Management
 *   **Interactive Orders Tab**: Users can monitor their placed orders in real-time.
 *   **Local Sorting Engine**: Solves standard Firestore missing-index crashes on client machines. Fetched orders are sorted dynamically **in-memory** by date, ensuring immediate loading.
 *   **Detailed Order Metadata**: Each order records the recipe name, quantity, cuisine, total bill amount, timestamp, and dish image.
 
-### 💾 3. AsyncStorage Favourites System (Q3)
+### 💾 3. AsyncStorage Favourites System 
 *   **Offline Hearting**: Users can add or remove recipes to/from their local favourites library.
 *   **State Persistence**: Selected meals are cached in device storage using `@react-native-async-storage/async-storage` and remain intact even after the app is closed or restarted.
 
-### 🌐 4. DummyJSON API Integration & Resilient Fallback Engine (Q4)
+### 🌐 4. DummyJSON API Integration & Resilient Fallback Engine 
 *   **Live Recipe Queries**: Fetches fresh recipe data directly from the public `https://dummyjson.com/recipes` endpoint.
 *   **Zero-Network Resiliency**: If the device experiences connection drops, firewall blocks, or `net::ERR_CONNECTION_RESET` errors, the system seamlessly activates a built-in **Local Gourmet Fallback Database** containing detailed pre-formatted meals, preventing app crashes.
 
-### 🎨 5. Gourmet Emerald Design System (Q5)
+### 🎨 5. Gourmet Emerald Design System
 *   **Cohesive Theme**: Features a custom visual layout matching luxury organic branding.
 *   **Custom success confirmation popup modal** with live billing calculations instead of browser default popups.
 *   **Micro-interactions**: Hover effects, customized loading spinners, and custom buttons.
